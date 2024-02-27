@@ -29,6 +29,8 @@ namespace Task4
             SynchronizationContext.SetSynchronizationContext(new CustomSynchronizationContext());
 
             FactorialAsync(5);
+            ///Conclusion:
+            ///do not create void return type async methods (until it's neccessary) because exceptions inside of this methods won't be catched
         }
 
         static async void FactorialAsync(int num)
